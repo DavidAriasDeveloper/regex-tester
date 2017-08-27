@@ -34,9 +34,9 @@ def print_menu():
 def testRegex(id,text):
     match = re.search(regex[id],text)#Almacenamos el resultado de la busqueda
     if(match):#Si se obtuvo un resultado diferente de None
-        print(text[match.start():match.end()]+" es valido")#Imprimimos el resultado
+        print(text[match.start():match.end()]+" es valido\n")#Imprimimos el resultado
     else:
-        print("La cadena ingresada no es valida")
+        print("La cadena ingresada no es valida\n")
 
 #Ejecucion del programa
 def main():
@@ -45,19 +45,7 @@ def main():
         print_menu()#Imprimimos el menu
         option = str(input('# '))#Almacenamos la opcion digitada
         print()#Salto de linea
-        if(option == '0'):
-            print("WIP\n")
-        elif(option == '1'):
-            print("WIP\n")
-        elif(option == '2'):
-            print("WIP\n")
-        elif(option == '3'):
-            print("WIP\n")
-        elif(option == '4'):
-            print("WIP\n")
-        elif(option == '5'):
-            print("WIP\n")
-        elif(option == '6'):
+        if(int(option) < 7):
             string = str(input("Ingrese la cadena\n>>> "))#Almacenamos la cadena ingresada
             testRegex(int(option),string)#La testeamos con su respectiva ER
         elif(option == '7'):
