@@ -9,12 +9,12 @@ import re
 #Se define un diccionario para almacenar expresiones regulares
 regex = {}
 #Se definen las expresiones regulares
-regex[0] = re.compile('')#ER para correos electronicos
-regex[1] = re.compile('')#ER para direcciones ip
-regex[2] = re.compile('')#ER para tarjetas de credito
-regex[3] = re.compile('')#ER para numeros binarios
-regex[4] = re.compile('')#ER para numeros hexadecimales
-regex[5] = re.compile('')#ER para direcciones web
+regex[0] = re.compile('^[_a-z0- 9-]+(\.[_a- z0-9- ]+)*@[a-z0- 9-]+(\.[a- z0-9- ]+)*(\.[a-z]{2,3})$')#ER para correos electronicos
+regex[1] = re.compile('^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$') #ER para direcciones ip
+regex[2] = re.compile('^((67\d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))(-?\s?\d{4}){3}|(3[4,7])\ d{2}-?\s?\d{6}-?\s?\d{5}$  ')#ER para tarjetas de credito
+regex[3] = re.compile('^[0-1]+[b[0- 1]+]')#ER para numeros binarios
+regex[4] = re.compile('#([a-fA-F]|[0-9]){3, 6}')#ER para numeros hexadecimales
+regex[5] = re.compile('^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$ ')#ER para direcciones web
 regex[6] = re.compile('(/\*[^*]*[^/]*\*/)|(//.*)')#ER para comentarios
 
 #Funcion para imprimir menu
